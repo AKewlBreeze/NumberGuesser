@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type = "text/css" href = "325-query.css">
+  <link rel="stylesheet" type = "text/css" href = "styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <link  href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+
+  <title>Number Guesser</title>
+</head>
+
+  <body>
+    <header>
+      <h1> Number<span class='A'>Guesser</span></h1>
+    </header>
+
+    <section class="inputArea">
+    <input class = "userInput"placeholder="Enter Your Guess" type="number" name="name" value="Enter Your Guess"></input>
+
+      <button class="button">
+        <p class="button-text">Clear</p>
+      </button>
+
+      <button class="button">
+        <p class="button-text">Guess</p>
+      </button>
+    </section>
+
+    <section class="guessStatement">
+      <p class="recall">Your last guess was:</p>
+       <div class="populate"></div>
+        <p class="message"></p>
+          <button class="resetGuess" type="button" name="reset">
+            <p class ="button-text">Reset</p>
+          </button>
+    </section>
+
+
+    <script src="functions.js"></script>
+
+  </body>
+</html>
