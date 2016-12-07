@@ -38,36 +38,43 @@
 
 
   /*1st Section */
-  .inputArea {
-    border:solid 1px red;
-    text-align: center;
-    align-content: center;
-    padding:20px;
+.inputArea {
+  border:solid 1px red;
+  text-align: center;
+  align-content: center;
+  padding:20px;
   }
 
-  .userInput {
-    margin:10px;
-    height: 30px;
-    width: 250px;
-    display:block;
-    margin:auto;
+.userInput {
+  margin:10px;
+  height: 30px;
+  width: 325px;
+  display:block;
+  margin:auto;
   }
 
+.clear{
+  display: inline-block;
+  margin:10px;
+  width:150px;
+  height:30px;
+  border-radius: 20px;
+  background-color: #929497;
+}
+.guess{
+  display: inline-block;
+  margin:10px;
+  width:150px;
+  height:30px;
+  border-radius: 20px;
+  background-color: #929497;
+}
 
-    .button{
-    display: inline-block;
-    margin:10px;
-    width:150px;
-    height:30px;
-    border-radius: 20px;
-    background-color: #929497;
-  }
-
-  .button:hover{
+  .guess:hover{
     background-color: #EB008B;
   }
 
-  .button:disabled{
+  .guess:disabled{
     background-color:#D0DD23
   }
 
@@ -111,9 +118,13 @@
 
     .populate {
     border:solid 2px red;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
+    padding: auto;
     margin:auto;
+    color: #EB008B;
+    font-size: 150px;
+
   }
 
   .guessStatement {
@@ -121,14 +132,13 @@
     text-align: center;
   }
 
-  .populate {
-    font-size:;
-    font:pink;
-  }
 
   .integer{
     font-size:25px;
-    background-color: #EB008B;
+
   }
 
+.populate:p{
+  background: red;
+}
 }
