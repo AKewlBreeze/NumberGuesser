@@ -54,7 +54,7 @@
   }
 
 
-    .button{
+    .clear{
     display: inline-block;
     margin:10px;
     width:150px;
@@ -63,21 +63,21 @@
     background-color: #929497;
   }
 
-  .button:hover{
-    background-color: #EB008B;
-  }
-
-  .button:disabled{
-    background-color:#D0DD23
-  }
-
-  .clear {
+  .guess{
   display: inline-block;
   margin:10px;
   width:150px;
   height:30px;
   border-radius: 20px;
   background-color: #929497;
+}
+
+  .guess:hover{
+    background-color: #EB008B;
+  }
+
+  .guess:disabled{
+    background-color:#D0DD23
   }
 
   .button-text {
