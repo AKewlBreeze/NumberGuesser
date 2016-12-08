@@ -47,6 +47,10 @@
     margin-top:10px;
     }
 
+  .guess:hover{
+    background-color: #EB008B;
+  }
+
     .clear{
     display: block;
     width:100%;
@@ -54,6 +58,10 @@
     border-radius: 20px;
     background-color: #929497;
     margin-top:10px;
+    }
+
+    .clear:hover{
+      background-color: #EB008B;
     }
 
     .reset{
@@ -76,7 +84,7 @@
 
   /*1st Section */
   .inputArea {
-    border:solid 1px red;
+
     text-align: center;
     align-content: center;
     padding:20px;
@@ -111,22 +119,27 @@
 
   }
 
+  .resetGuess:hover{
+    background-color: #EB008B;
+  }
+
   .numberGuess {
     margin:20px;
     text-align: center;
     font-size: 25px;
   }
     .populate {
-      border:solid 2px red;
+
       height: 200px;
       width: 200px;
       padding: auto;
       color: #EB008B;
       font-size: 150px;
+      margin: auto;
   }
 
   .guessStatement {
-    border: solid red 1px;
+    
     text-align: center;
   }
 

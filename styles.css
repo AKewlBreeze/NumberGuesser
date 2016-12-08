@@ -39,7 +39,7 @@
 
   /*1st Section */
 .inputArea {
-  border:solid 1px red;
+
   text-align: center;
   align-content: center;
   padding:20px;
@@ -110,7 +110,6 @@
 
 
     .populate {
-    border:solid 2px red;
     height: 200px;
     width: 200px;
     padding: auto;
@@ -121,7 +120,6 @@
   }
 
   .guessStatement {
-    border: solid red 1px;
     text-align: center;
   }
 
@@ -133,5 +131,4 @@
 
 .populate:p{
   background: red;
-}
 }
