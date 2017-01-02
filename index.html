@@ -1,44 +1,36 @@
 <!doctype html>
-<head>
-  <link rel="stylesheet" type="text/css" href="reset.css">
-  <link rel="stylesheet" type = "text/css" href = "325-query.css">
-  <link rel="stylesheet" type = "text/css" href = "styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-  <link  href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 
-  <title>Number Guesser</title>
+<head>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="325-query.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <title>Number Guesser</title>
 </head>
 
-  <body>
-    <header>
-      <h1> Number<span class='A'>Guesser</span></h1>
-    </header>
+<body>
+  <header>
+    <h1> Number<span class='guesser-title'>Guesser</span></h1>
+  </header>
+  <section class="inputArea">
+    <input class="userInput" placeholder="Enter Your Guess" type="number"></input>
+    <button class="guess">
+      <p class="button-text">Guess</p>
+    </button>
+    <button class="clear">
+      <p class="button-text">Clear</p>
+    </button>
+  </section>
 
-    <section class="inputArea">
-    <input class = "userInput"placeholder="Enter Your Guess" type="number"></input>
-
-      <button class="guess">
-        <p class="button-text">Guess</p>
-      </button>
-
-      <button class="clear">
-        <p class="button-text">Clear</p>
-      </button>
-    </section>
-
-    <section class="guessStatement">
-      <p class="recall">Your last guess was:</p>
-       <div class="populate">
-        <!-- <p class="integer">yup</p> -->
-         <p class="message"></p>
-        </div>
-          <button class="resetGuess">
-            <p class ="button-text">Reset</p>
-          </button>
-    </section>
-
-
-    <script src="numbers.js"></script>
-
-  </body>
+  <section class="guessStatement">
+    <p class="recall">Your last guess was:</p>
+    <div class="populate"></div>
+    <span class="message"></span>
+    <button class="resetGuess">
+      <p class ="button-text">Reset</p>
+    </button>
+  </section>
+  <script src="numbers.js"></script>
+</body>
 </html>

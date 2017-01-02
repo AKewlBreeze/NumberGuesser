@@ -6,7 +6,7 @@
     background-color: black;
     height:100px;
     text-align: center;
-
+    background-color:#404041;
   }
 
   h1 {
@@ -139,7 +139,7 @@
   }
 
   .guessStatement {
-    
+
     text-align: center;
   }
 
