@@ -1,65 +1,70 @@
-
 var recentGuess = document.querySelector(".userInput");
 var guessButton = document.querySelector(".guess");
 var clearButton = document.querySelector(".clear");
 var display = document.querySelector(".populate");
-var rando = Math.floor (Math.random() * 100);
 var resetButton = document.querySelector(".resetGuess");
-var message = document.querySelector(".message");
 
-
-
-function getRando(){
-  var numberGuess = recentGuess.value;
-  if (numberGuess > 100){
-    alert("Number 1-100 please");
-    display.innerText=("");
-  } else if (numberGuess > rando){
-    alert("too high");
-    display.innerText=(recentGuess.value);
-  } else if (numberGuess < rando){
-    alert("too low");
-    display.innerText=(recentGuess.value);
-  } else if (numberGuess == rando){
-    alert("boom!");
-    display.innerText=(recentGuess.value);
-  }
+function newRandomNumber(){
+  return Math.floor(Math.random() * 100);
 }
 
-// if(inputName.val() === ""){
-//   submitButton.prop("disabled", true);
-// } else {
-//     submitButton.prop("disabled", false);
-//   }
-// });
+var generateRandomNumber = newRandomNumber();
 
-guessButton.addEventListener("click",function(){
-  if (recentGuess.value === ""){
-    guessButton.disabled=true;
-  } else {
-    guessButton.disabled=false;
-    getRando();
-  }
 
-  }
-);
 
-clearButton.addEventListener("click", function (){
-  recentGuess.value = ("");
-  if (recentGuess.value === ""){
-    clearButton.disabled=true;
-  } else {
-    clearButton.disabled=false;
+function checkRandomNumber() {
+  var guessFeedback = document.querySelector(".message");
+  var numberGuess = recentGuess.value;
+  if (numberGuess > 100) {
+    alert("Number 1-100 please");
+    display.innerText = "";
+  } else if (numberGuess > generateRandomNumber) {
+    guessFeedback.innerText="too high";
+    display.innerText = (recentGuess.value);
+  } else if (numberGuess < generateRandomNumber) {
+    guessFeedback.innerText="too low";
+    display.innerText = (recentGuess.value);
+  } else if (numberGuess == generateRandomNumber) {
+    guessFeedback.innerText="boom";
+    display.innerText = (recentGuess.value);
   }
+  console.log(generateRandomNumber);
+}
+
+function disable(){
+  guessButton.disabled=true;
+  clearButton.disabled=true;
+  resetButton.disabled=true;
+}
+
+function afterClearDisable(){
+  guessButton.disabled=true;
+  clearButton.disabled=true;
+}
+
+function enable(){
+  guessButton.disabled=false;
+  clearButton.disabled=false;
+  resetButton.disabled=false;
+}
+
+disable();
+
+recentGuess.addEventListener("keyup", function(){
+  enable();
 });
 
-resetButton.addEventListener("click", function(){
-  if(display.innerText=== ""){
-    resetButton.disabled=true;
-  }
-  recentGuess.value = ("");
-  display.innerText=("");
-  window.location.reload();
+guessButton.addEventListener("click", function(){
+  checkRandomNumber();
 });
 
-// onClick="window.location.reload()"
+clearButton.addEventListener("click", function() {
+  recentGuess.value = "";
+  afterClearDisable();
+});
+
+resetButton.addEventListener("click", function() {
+  recentGuess.value="";
+  display.innerText="";
+  generateRandomNumber = newRandomNumber();
+});
