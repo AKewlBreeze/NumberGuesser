@@ -10,14 +10,12 @@ function newRandomNumber(){
 
 var generateRandomNumber = newRandomNumber();
 
-
-
 function checkRandomNumber() {
   var guessFeedback = document.querySelector(".message");
   var numberGuess = recentGuess.value;
   if (numberGuess > 100) {
     alert("Number 1-100 please");
-    display.innerText = "";
+    // display.innerText = "";
   } else if (numberGuess > generateRandomNumber) {
     guessFeedback.innerText="too high";
     display.innerText = (recentGuess.value);
@@ -48,7 +46,7 @@ function enable(){
   resetButton.disabled=false;
 }
 
-disable();
+// disable();
 
 recentGuess.addEventListener("keyup", function(){
   enable();
